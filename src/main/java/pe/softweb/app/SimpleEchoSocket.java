@@ -11,10 +11,6 @@ import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
 import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 
-
-/**
- * Basic Echo Client Socket
- */
 @WebSocket(maxTextMessageSize = 64 * 1024)
 public class SimpleEchoSocket
 {
@@ -47,14 +43,14 @@ public class SimpleEchoSocket
         this.session = session;
         try
         {
-            Future<Void> fut;
-            fut = session.getRemote().sendStringByFuture("Hello");
-            fut.get(2,TimeUnit.SECONDS); // wait for send to complete.
-
-            fut = session.getRemote().sendStringByFuture("Thanks for the conversation.");
-            fut.get(2,TimeUnit.SECONDS); // wait for send to complete.
-
-            session.close(StatusCode.NORMAL,"I'm done");
+//            Future<Void> fut;
+//            fut = session.getRemote().sendStringByFuture("Hello");
+//            fut.get(2,TimeUnit.SECONDS); // wait for send to complete.
+//
+//            fut = session.getRemote().sendStringByFuture("Thanks for the conversation.");
+//            fut.get(2,TimeUnit.SECONDS); // wait for send to complete.
+//
+//            session.close(StatusCode.NORMAL,"I'm done");
         }
         catch (Throwable t)
         {

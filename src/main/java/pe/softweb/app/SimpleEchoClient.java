@@ -28,7 +28,7 @@ public class SimpleEchoClient
             System.out.printf("Connecting to : %s%n",echoUri);
 
             // wait for closed socket connection.
-            socket.awaitClose(5,TimeUnit.SECONDS);
+            socket.awaitClose(20,TimeUnit.SECONDS);
         }
         catch (Throwable t)
         {
